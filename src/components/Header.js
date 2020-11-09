@@ -20,15 +20,15 @@ function Header() {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <header>
-      <Navbar color="dark" dark expand="md">
+      <Navbar dark expand="md" fixed="top" className="pt-4">
         <NavbarBrand href="/">JashanDeol</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            <NavItem className="mx-2">
               <NavLink href="/">Home</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown nav inNavbar className="mx-2">
               <DropdownToggle nav caret>
                 Portfolio
               </DropdownToggle>
@@ -38,7 +38,9 @@ function Header() {
                 <DropdownItem>Landscape</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Button color="primary">Contact me</Button>
+            <Button color="primary" className="mx-2">
+              Contact me
+            </Button>
           </Nav>
         </Collapse>
       </Navbar>
