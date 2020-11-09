@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Collapse,
   Navbar,
@@ -16,11 +16,30 @@ import {
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
+
+  const [scrolled, setScrolled] = React.useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
   return (
     <header>
-      <Navbar dark expand="md" fixed="top" className="pt-4">
+      <Navbar
+        dark
+        fixed="top"
+        expand="md"
+        className={`pt-4 ${scrolled ? "bg-dark" : ""}`}
+      >
         <NavbarBrand href="/">JashanDeol</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

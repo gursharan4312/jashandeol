@@ -1,16 +1,16 @@
-// import React from "react";
+import Hero from "./components/Hero";
+import Portfolio from "./components/Portfolio";
 const { default: AboutMe } = require("./components/AboutMe");
 const { default: Header } = require("./components/Header");
-const { default: Hero } = require("./components/Hero");
-// import Hero from "./components/Hero";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
       <Hero />
       <AboutMe />
-    </>
+      <Portfolio />
+    </div>
   );
 }
 

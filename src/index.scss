@@ -43,6 +43,7 @@ body {
 header {
   nav {
     background: transparent;
+
     ul {
       li {
         a {
@@ -56,6 +57,8 @@ header {
 .hero-container {
   height: 100vh;
   position: relative;
+  max-height: 1080px;
+  max-width: 1920px;
   .carousel {
     height: 100%;
     .carousel-inner {
@@ -89,6 +92,15 @@ header {
         font-size: 3.5rem;
         font-weight: bold;
       }
+    }
+  }
+}
+
+.portfolio {
+  .categories {
+    .category {
+      // transition: all 350ms ease;
+      // width: 33%;
     }
   }
 }
