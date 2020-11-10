@@ -6,22 +6,46 @@ function Portfolio() {
     <Container className="portfolio">
       <Row className="categories">
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
         <Col md={4} sm={6} lg={3} className="category">
-          <img src="/assests/images/hero1.jpg" className="img-fluid" />
+          <img
+            src="/assests/images/hero1.jpg"
+            className="img-fluid"
+            alt="category"
+          />
         </Col>
       </Row>
     </Container>

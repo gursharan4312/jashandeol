@@ -1,5 +1,5 @@
 import React from "react";
-import { UncontrolledCarousel, Row, Col } from "reactstrap";
+import { UncontrolledCarousel } from "reactstrap";
 
 function Hero() {
   const items = [
