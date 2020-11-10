@@ -38,7 +38,7 @@ function Header() {
         dark
         fixed="top"
         expand="md"
-        className={`pt-4 ${scrolled ? "bg-dark" : ""}`}
+        className={` ${scrolled ? "bg-dark" : ""}`}
       >
         <NavbarBrand href="/">JashanDeol</NavbarBrand>
         <NavbarToggler onClick={toggle} />
