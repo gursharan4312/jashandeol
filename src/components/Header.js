@@ -14,7 +14,7 @@ import {
   Button,
 } from "reactstrap";
 
-function Header() {
+function Header({ type }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -36,9 +36,9 @@ function Header() {
     <header>
       <Navbar
         dark
-        fixed="top"
+        fixed={type === "home" ? "top" : ""}
         expand="md"
-        className={scrolled ? "bg-dark" : ""}
+        className={type === "home" ? (!scrolled ? "" : "bg-dark") : "bg-dark"}
       >
         <NavbarBrand href="/">JashanDeol</NavbarBrand>
         <NavbarToggler onClick={toggle} />

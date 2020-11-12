@@ -1,20 +1,12 @@
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
-const { default: AboutMe } = require("./components/AboutMe");
-const { default: Header } = require("./components/Header");
-
+import { Switch, Route } from "react-router-dom";
+import Portfolio from "./pages/Portfolio";
+import Home from "./pages/Home";
 function App() {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <AboutMe />
-      <Portfolio />
-      <ContactSection />
-      <Footer />
-    </div>
+    <Switch>
+      <Route path="/portfolio" component={Portfolio} />
+      <Route extact path="/" component={Home} />
+    </Switch>
   );
 }
 
