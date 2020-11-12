@@ -31,6 +31,11 @@ $max_width: 1200px;
 $min_font: 16px;
 $max_font: 20px;
 
+$xsmallwidth: 576px;
+$smallwidth: 768px;
+$mediumwidth: 992px;
+$largewidth: 1200px;
+
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
@@ -38,6 +43,7 @@ html {
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  // background-color: #333;
 }
 
 header {
@@ -57,7 +63,8 @@ header {
   height: 100vh;
   position: relative;
   max-height: 1080px;
-  max-width: 1920px;
+  // max-width: 1920px;
+  margin: 0 auto;
   .carousel {
     height: 100%;
     .carousel-inner {
@@ -98,8 +105,43 @@ header {
 .portfolio {
   .categories {
     .category {
-      // transition: all 350ms ease;
-      // width: 33%;
+      overflow: hidden;
+      img {
+        filter: brightness(70%);
+        transition: all 0.3s ease-in-out;
+      }
+      .category-inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          color: #fff;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          text-transform: uppercase;
+          font-weight: bold;
+          @media screen and (max-width: $smallwidth) {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        img {
+          filter: brightness(40%);
+          transform: scale(1.2);
+        }
+        .category-inner {
+          span {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }

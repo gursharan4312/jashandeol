@@ -5,9 +5,9 @@ function AboutMe() {
   return (
     <Container className="aboutme-container">
       <Row className="py-4 my-4">
-        <Col md={6}>
+        <Col md={4}>
           <img
-            src="/assests/images/hero1.jpg"
+            src="/assests/images/profile.jpg"
             alt="jashandeol"
             className="img-fluid"
           />
