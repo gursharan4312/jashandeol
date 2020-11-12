@@ -47,7 +47,9 @@ function ContactSection() {
           />
         </FormGroup>
 
-        <Button>Submit</Button>
+        <Button color="outline-dark" size="lg">
+          Submit
+        </Button>
       </Form>
     </Container>
   );
