@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 const { default: AboutMe } = require("./components/AboutMe");
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Portfolio />
+      <Footer />
     </div>
   );
 }

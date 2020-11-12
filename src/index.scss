@@ -145,3 +145,16 @@ header {
     }
   }
 }
+
+footer {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 2em 0;
+  .hire-me-btn {
+    // border: 1px solid #fff;
+    // color: #fff;
+    margin: 0 1em;
+  }
+}
