@@ -1,3 +1,4 @@
+import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Portfolio />
+      <ContactSection />
       <Footer />
     </div>
   );

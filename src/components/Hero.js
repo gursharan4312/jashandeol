@@ -25,8 +25,8 @@ function Hero() {
         controls={false}
         // interval={1000000}
       />
-      <div className="hero-inner-container">
-        <div className="hero-content p-4">
+      <div className="hero-inner-container text-center">
+        <div className="hero-content px-4">
           <h3>Jashan Deol</h3>
           <h1>Photographer &amp; FilmMaker</h1>
         </div>
