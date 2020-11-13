@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
 import Layout from "../components/Layout";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
