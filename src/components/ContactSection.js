@@ -10,7 +10,9 @@ function ContactSection() {
   };
   return (
     <Container className="contact-section my-5">
-      <h1 className="text-center">Contact me!</h1>
+      <h1 className="text-center" id="contact">
+        Contact me!
+      </h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label for="name">Name :</Label>

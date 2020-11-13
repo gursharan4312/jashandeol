@@ -22,9 +22,9 @@ function Portfolio({ match }) {
     setIsOpen(!isOpen);
   };
   return (
-    <Layout type="other" className="portfolio-page">
+    <Layout type="other" className="portfolio-page mb-5">
       <Container>
-        <h1>{match.params.category}</h1>
+        <h1 className="mt-5 mb-4">{match.params.category}</h1>
         <div className="gallery-images">
           <MagicGrid gutter={0} items={images.length} ref={gridRef}>
             {images.map((image, i) => (
