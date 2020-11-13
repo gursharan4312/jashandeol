@@ -2,11 +2,11 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-function Layout({ type, children }) {
+function Layout({ className, type, children }) {
   return (
     <>
       <Header type={type} />
-      <main>{children}</main>
+      <main className={className}>{children}</main>
       <Footer />
     </>
   );

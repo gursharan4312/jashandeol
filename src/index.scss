@@ -155,3 +155,21 @@ footer {
   color: #fff;
   padding: 2em 0;
 }
+
+.portfolio-page {
+  .gallery-images {
+    .img-col {
+      overflow: hidden;
+      img {
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover {
+        cursor: pointer;
+        img {
+          // filter: brightness(40%);
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
