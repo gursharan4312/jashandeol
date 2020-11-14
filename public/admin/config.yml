@@ -15,12 +15,13 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
-    summary: "Caategories: Jashan Deol"
+    summary: "Categories: Jashan Deol"
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
       - name: categories
-        label: Category
+        label: Categories
+        label_singular: category
         title: categories
         widget: list
         collapsed: true
