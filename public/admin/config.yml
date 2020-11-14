@@ -6,12 +6,12 @@ media_folder: "public/assests/images"
 public_folder: "/assests/images"
 
 collections:
-  - name: "Jashan Deol" # Used in routes, e.g., /admin/collections/blog
+  - name: "categories" # Used in routes, e.g., /admin/collections/blog
     label: "categories" # Used in the UI
-    identifier_field: label
+    identifier_field: name
     folder: "categories/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    delete: true
+    create: false # Allow users to create new documents in this collection
+    delete: false
     slug: "categories" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
@@ -19,7 +19,7 @@ collections:
       preview: false
     fields: # The fields for each document, usually in front matter
       - name: categories
-        label: Categories
+        label: Category
         widget: list
         collapsed: true
         fields:
