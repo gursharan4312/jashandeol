@@ -9,7 +9,7 @@ collections:
   - name: "Jashan Deol" # Used in routes, e.g., /admin/collections/blog
     label: "jashandeol" # Used in the UI
     folder: "categories/" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
+    create: true # Allow users to create new documents in this collection
     delete: false
     slug: "categories-{{label}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
