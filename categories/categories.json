@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "name": "Category1",
+      "thumbnail": "/assests/images/hero1.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg"
+      ]
+    },
+    {
+      "name": "Category 2",
+      "thumbnail": "/assests/images/hero1.jpg",
+      "images": [
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg",
+        "/assests/images/hero1.jpg"
+      ]
+    }
+  ]
+}
