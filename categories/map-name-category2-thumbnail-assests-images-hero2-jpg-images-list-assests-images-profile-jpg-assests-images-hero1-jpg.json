@@ -1,0 +1,8 @@
+{
+  "name": "category2",
+  "thumbnail": "/assests/images/hero2.jpg",
+  "images": [
+    "/assests/images/profile.jpg",
+    "/assests/images/hero1.jpg"
+  ]
+}
