@@ -1,0 +1,8 @@
+---
+name: Category 1
+thumbnail: /assests/images/hero1.jpg
+images:
+  - /assests/images/hero1.jpg
+  - /assests/images/hero2.jpg
+  - /assests/images/profile.jpg
+---
