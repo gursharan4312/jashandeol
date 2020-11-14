@@ -19,6 +19,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - name: categories
         label: Category
+        title: categories
         widget: list
         collapsed: true
         fields:
