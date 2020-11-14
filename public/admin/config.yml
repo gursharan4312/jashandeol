@@ -10,25 +10,19 @@ collections:
     label: "jashandeol" # Used in the UI
     folder: "categories/" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
+    delete: false
     slug: "categories-{{label}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
     editor:
      preview: false
     fields: # The fields for each document, usually in front matter
-      -{
-        label: "Categories"
-        name: "categories"
-        widget: "list"
-        collapsed: true
+      - label: "Categories",
+        name: "categories",
+        widget: "list",
+        collapsed: true,
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Featured Image", name: "thumbnail", widget: "image" }
-          - {
-              label: "Images",
-              name: "images",
-              widget: "list",
-              field: { label: "Image", name: "image", widget: "image" },
-            }
-      }
+          - {label: "Images",name: "images",widget: "list",field: { label: "Image", name: "image", widget: "image" }}
       
