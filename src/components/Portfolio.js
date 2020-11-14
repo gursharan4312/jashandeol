@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Container } from "reactstrap";
 import Category from "./Category";
 import MagicGrid from "react-magic-grid";
@@ -30,7 +30,7 @@ function Portfolio() {
     if (categories.length === 0) {
       getCategories();
     }
-  }, []);
+  }, [categories.length, dispatch]);
 
   return (
     <Container className="portfolio mb-5">
