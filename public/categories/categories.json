@@ -7,6 +7,25 @@
         "/assests/images/hero1.jpg",
         "/assests/images/hero2.jpg"
       ]
+    },
+    {
+      "name": "Products",
+      "thumbnail": "/assests/images/hero2.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg",
+        "/assests/images/hero2.jpg"
+      ]
+    },
+    {
+      "name": "Landscape",
+      "thumbnail": "/assests/images/hero2.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg"
+      ]
     }
   ]
 }
