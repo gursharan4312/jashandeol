@@ -13,6 +13,7 @@ import {
   DropdownItem,
   Button,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function Header({ type }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,16 @@ function Header({ type }) {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
   return (
     <header>
       <Navbar
         dark
-        fixed={type === "home" ? "top" : ""}
+        fixed="top"
         expand="md"
         className={type === "home" ? (!scrolled ? "" : "bg-dark") : "bg-dark"}
       >
@@ -52,14 +56,23 @@ function Header({ type }) {
                 Portfolio
               </DropdownToggle>
               <DropdownMenu>
-                <DropdownItem>Potrait</DropdownItem>
-                <DropdownItem>Wedding</DropdownItem>
-                <DropdownItem>Landscape</DropdownItem>
+                <Link to="/portfolio/people" className="text-decoration-none">
+                  <DropdownItem>People</DropdownItem>
+                </Link>
+                <Link to="/portfolio/products" className="text-decoration-none">
+                  <DropdownItem>Products</DropdownItem>
+                </Link>
+                <Link
+                  to="/portfolio/landscape"
+                  className="text-decoration-none"
+                >
+                  <DropdownItem>Landscape</DropdownItem>
+                </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Button color="primary" className="mx-2">
+            <a href="/#contact" className=" btn btn-primary mx-2">
               Contact me
-            </Button>
+            </a>
           </Nav>
         </Collapse>
       </Navbar>

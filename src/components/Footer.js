@@ -11,9 +11,9 @@ function Footer() {
             <h2>Let's get in touch and create beautiful thiings together</h2>
           </Col>
           <Col sm={4}>
-            <Link to="/#contact" className="btn btn-lg btn-outline-light ml-4">
+            <a href="/#contact" className="btn btn-lg btn-outline-light ml-4">
               Hire me
-            </Link>
+            </a>
           </Col>
         </Row>
       </Container>

@@ -38,6 +38,8 @@ $largewidth: 1200px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 body {

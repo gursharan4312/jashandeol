@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 
 function AboutMe() {
   return (
-    <Container className="aboutme-container">
+    <Container className="aboutme-container py-4">
       <Row className="py-4 my-4">
         <Col md={4}>
           <img

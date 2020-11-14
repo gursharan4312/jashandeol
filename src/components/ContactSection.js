@@ -9,10 +9,8 @@ function ContactSection() {
     e.preventDefault();
   };
   return (
-    <Container className="contact-section my-5">
-      <h1 className="text-center" id="contact">
-        Contact me!
-      </h1>
+    <Container className="contact-section my-5" id="contact">
+      <h1 className="text-center">Contact me!</h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label for="name">Name :</Label>
