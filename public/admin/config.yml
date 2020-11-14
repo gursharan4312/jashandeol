@@ -20,7 +20,7 @@ collections:
       - {
           name: "categories",
           label: "Categories",
-          widget: "list",
+          widget: "object",
           collapsed: true,
           fields:
             - { label: "Name", name: "name", widget: "string" }
