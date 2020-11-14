@@ -25,6 +25,6 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string" }
             - { label: "Featured Image", name: "thumbnail", widget: "image" }
-            - {label: "Images",name: "images",widget: "list",field: { label: "Image", name: "image", widget: "image" }}
+            - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" }}
         }
       
