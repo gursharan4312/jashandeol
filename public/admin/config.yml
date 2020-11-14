@@ -17,12 +17,14 @@ collections:
     editor:
      preview: false
     fields: # The fields for each document, usually in front matter
-      - label: "Categories",
-        name: "categories",
-        widget: "list",
-        collapsed: true,
-        fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Featured Image", name: "thumbnail", widget: "image" }
-          - {label: "Images",name: "images",widget: "list",field: { label: "Image", name: "image", widget: "image" }}
+      - {
+          name: "categories",
+          label: "Categories",
+          widget: "list",
+          collapsed: true,
+          fields:
+            - { label: "Name", name: "name", widget: "string" }
+            - { label: "Featured Image", name: "thumbnail", widget: "image" }
+            - {label: "Images",name: "images",widget: "list",field: { label: "Image", name: "image", widget: "image" }}
+        }
       
