@@ -10,8 +10,8 @@ collections:
     label: "category" # Used in the UI'
     identifier_field: name
     folder: "public/categories/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    delete: true
+    create: false # Allow users to create new documents in this collection
+    delete: false
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
