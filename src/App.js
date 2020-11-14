@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
 import Home from "./pages/Home";

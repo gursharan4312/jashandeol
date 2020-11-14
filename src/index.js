@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
+import Store from "./CategoryContext";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Store>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+    </Store>
+  </BrowserRouter>,
   document.getElementById("root")
 );
