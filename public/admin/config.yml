@@ -8,6 +8,7 @@ public_folder: "/assests/images"
 collections:
   - name: "categories" # Used in routes, e.g., /admin/collections/blog
     label: "categories" # Used in the UI
+    identifier_field: name
     title: "categories"
     folder: "categories/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
