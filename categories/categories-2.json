@@ -1,0 +1,11 @@
+{
+  "categories": [
+    {
+      "name": "asdf",
+      "thumbnail": "/assests/images/hero2.jpg",
+      "images": [
+        "/assests/images/hero2.jpg"
+      ]
+    }
+  ]
+}
