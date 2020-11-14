@@ -12,7 +12,7 @@ collections:
     folder: "public/categories/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     delete: true
-    identifier_field: name
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
     editor:
