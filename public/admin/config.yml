@@ -8,10 +8,10 @@ public_folder: "/assests/images"
 collections:
   - name: "categories" # Used in routes, e.g., /admin/collections/blog
     label: "categories" # Used in the UI
-    identifier_field: name
+    title: "categories"
     folder: "categories/" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    delete: false
+    create: true # Allow users to create new documents in this collection
+    delete: true
     slug: "categories" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
