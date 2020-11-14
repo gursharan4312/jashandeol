@@ -1,8 +1,31 @@
 {
   "categories": [
     {
-      "name": "cat1",
-      "thumbnail": "/assests/images/hero1.jpg"
+      "name": "People",
+      "thumbnail": "/assests/images/hero1.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg"
+      ]
+    },
+    {
+      "name": "Products",
+      "thumbnail": "/assests/images/hero2.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg"
+      ]
+    },
+    {
+      "name": "Landscape",
+      "thumbnail": "/assests/images/profile.jpg",
+      "images": [
+        "/assests/images/hero1.jpg",
+        "/assests/images/hero2.jpg",
+        "/assests/images/profile.jpg"
+      ]
     }
   ]
 }
