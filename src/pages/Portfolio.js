@@ -25,7 +25,7 @@ function Portfolio({ match }) {
       dispatch({ type: "CATEGORY_REQUEST" });
 
       try {
-        let data = await fetch("/public/admin/data/categories/categories.json"););
+        let data = await fetch("/public/admin/data/categories/categories.json");
         data = await data.json();
         dispatch({
           type: "CATEGORY_REQUEST_SUCCESS",
