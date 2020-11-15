@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Category({ name, img }) {
   return (
-    <Col md={4} sm={6} className="category">
+    <Col md={4} sm={6} className="category py-2">
       <LazyLoadImage
         src={img}
         className="img-fluid"

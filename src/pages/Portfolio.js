@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { Container, Col } from "reactstrap";
 import Layout from "../components/Layout";
 import Lightbox from "react-image-lightbox";
@@ -9,6 +9,7 @@ import Loader from "../components/Loader";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Portfolio({ match }) {
+  const grid = useRef(null);
   const [state, dispatch] = useContext(Context);
   const { loading, categories } = state;
   const [images, setImages] = useState([]);
@@ -38,10 +39,22 @@ function Portfolio({ match }) {
         });
       }
     };
-    if (images.length === 0) {
+    if (categories.length === 0) {
       getCategories();
+    } else {
+      let count = 0;
+      (function interval() {
+        if (count < 10) {
+          if (grid.current !== null) grid.current.positionItems();
+          window.setTimeout(() => {
+            interval();
+            count += 1;
+            console.log("ref");
+          }, 500);
+        }
+      })();
     }
-  }, [dispatch, images]);
+  }, [dispatch, categories.length]);
 
   useEffect(() => {
     let category;
@@ -59,7 +72,7 @@ function Portfolio({ match }) {
         <div className="gallery-images">
           {loading && <Loader />}
           {images.length > 0 ? (
-            <MagicGrid gutter={0} items={images.length}>
+            <MagicGrid gutter={0} items={images.length} ref={grid}>
               {images.map((image, i) => (
                 <Col
                   sm={6}
