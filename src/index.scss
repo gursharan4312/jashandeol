@@ -51,6 +51,7 @@ body {
 header {
   nav {
     background: transparent;
+    z-index: 1000 !important;
     ul {
       li {
         a {
