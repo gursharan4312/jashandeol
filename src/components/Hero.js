@@ -1,27 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { UncontrolledCarousel } from "reactstrap";
+import Loader from "./Loader";
 
 function Hero() {
-  const items = [
-    {
-      src: "/assests/images/hero1.jpg",
-      altText: "Slide 1",
-      caption: "",
-      // header: "Slide 1 Header",
-      key: "1",
-    },
-    {
-      src: "/assests/images/hero2.jpg",
-      altText: "Slide 2",
-      caption: "",
-      // header: "Slide 2 Header",
-      key: "2",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  const [loading, setloading] = useState(false);
+
+  useEffect(() => {
+    async function getImages() {
+      setloading(true);
+      let data = await fetch("/admin/data/heroImages.json");
+      data = await data.json();
+      setImages([...data.images]);
+      setloading(false);
+    }
+    getImages();
+  }, []);
+
   return (
     <div className="hero-container">
+      {loading && <Loader />}
       <UncontrolledCarousel
-        items={items}
+        items={images.map((image, i) => ({
+          src: image,
+          altText: "slide",
+          caption: "",
+          key: i,
+        }))}
         controls={false}
         // interval={1000000}
       />
