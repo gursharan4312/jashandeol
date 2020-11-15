@@ -1,12 +1,40 @@
 import React, { useState } from "react";
-import { Container, Button, Form, FormGroup, Label, Input } from "reactstrap";
+import {
+  Container,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Alert,
+} from "reactstrap";
 
 function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [formResoponse, setFormResponse] = useState({ color: "", message: "" });
   const handleSubmit = (e) => {
     e.preventDefault();
+    let data = { name, email, message };
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => {
+        setFormResponse({ color: "success", message: "Message Sent!" });
+      })
+      .catch((error) => {
+        setFormResponse({ color: "error", message: "Someting went wrong" });
+      });
+  };
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   };
   return (
     <Container className="contact-section my-5" id="contact">
@@ -50,6 +78,9 @@ function ContactSection() {
         <Button color="outline-dark" size="lg">
           Submit
         </Button>
+        {formResoponse.message !== "" && (
+          <Alert color={formResoponse.color}>{formResoponse.message}</Alert>
+        )}
       </Form>
     </Container>
   );
