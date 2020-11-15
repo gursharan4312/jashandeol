@@ -6,6 +6,7 @@ import "react-image-lightbox/style.css";
 import MagicGrid from "react-magic-grid";
 import { Context } from "../CategoryContext";
 import Loader from "../components/Loader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Portfolio({ match }) {
   const [state, dispatch] = useContext(Context);
@@ -67,7 +68,12 @@ function Portfolio({ match }) {
                   className="img-col"
                   onClick={() => toogleLightbox(i)}
                 >
-                  <img src={image} className="img-fluid my-2" alt="category" />
+                  <LazyLoadImage
+                    alt="category"
+                    src={image} // use normal <img> attributes as props
+                    className="img-fluid my-2"
+                    effect="blur"
+                  />
                 </Col>
               ))}
             </MagicGrid>

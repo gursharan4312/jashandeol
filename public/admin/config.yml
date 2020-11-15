@@ -9,10 +9,10 @@ collections:
   - name: "categories" # Used in routes, e.g., /admin/collections/blog
     label: "category" # Used in the UI'
     identifier_field: name
-    folder: "public/categories/" # The path to the folder where the documents are stored
+    folder: "public/admin/data" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     delete: false
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "categories" # Filename template, e.g., YYYY-MM-DD-title.md
     format: "json"
     extension: "json"
     summary: "Categories: Jashan Deol"
@@ -22,7 +22,6 @@ collections:
       - name: categories
         label: Categories
         label_singular: category
-        title: categories
         widget: list
         collapsed: true
         fields:
@@ -34,3 +33,22 @@ collections:
               widget: "list",
               field: { label: "Image", name: "image", widget: "image" },
             }
+
+  - name: "Homapage images"
+    label: "homapage images"
+    label_singular: "homapage image"
+    folder: "public/admin/data"
+    create: true
+    slug: "heroImages"
+    format: "json"
+    extension: "json"
+    summary: "Homepage Images"
+    editor:
+      preview: false
+    feilds:
+      - name: images
+        label: images
+        label_singular: image
+        widget: list
+        collapsed: true
+        field: { label: "Image", name: "image", widget: "image" }
