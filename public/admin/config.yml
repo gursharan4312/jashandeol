@@ -9,7 +9,7 @@ collections:
   - name: "categories" # Used in routes, e.g., /admin/collections/blog
     label: "category" # Used in the UI'
     identifier_field: name
-    folder: "public/admin/data" # The path to the folder where the documents are stored
+    folder: "public/admin/data/categories" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     delete: false
     slug: "categories" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -37,7 +37,7 @@ collections:
   - name: "Homapage images"
     label: "homapage images"
     label_singular: "homapage image"
-    folder: "public/admin/data"
+    folder: "public/admin/data/heroImages"
     create: true
     slug: "heroImages"
     format: "json"
