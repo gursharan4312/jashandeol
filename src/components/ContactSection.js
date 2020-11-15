@@ -8,15 +8,18 @@ import {
   Input,
   Alert,
 } from "reactstrap";
+import Loader from "./Loader";
 
 function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formResoponse, setFormResponse] = useState({ color: "", message: "" });
   const handleSubmit = (e) => {
     e.preventDefault();
     let data = { name, email, message };
+    setIsSubmitting(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -24,9 +27,11 @@ function ContactSection() {
     })
       .then(() => {
         setFormResponse({ color: "success", message: "Message Sent!" });
+        setIsSubmitting(false);
       })
       .catch((error) => {
         setFormResponse({ color: "error", message: "Someting went wrong" });
+        setIsSubmitting(false);
       });
   };
   const encode = (data) => {
@@ -78,8 +83,11 @@ function ContactSection() {
         <Button color="outline-dark" size="lg">
           Submit
         </Button>
+        {isSubmitting && <Loader />}
         {formResoponse.message !== "" && (
-          <Alert color={formResoponse.color}>{formResoponse.message}</Alert>
+          <Alert color={formResoponse.color} className="m-2">
+            {formResoponse.message}
+          </Alert>
         )}
       </Form>
     </Container>
