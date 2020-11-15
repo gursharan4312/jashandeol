@@ -1,3 +1,7 @@
 {
-    "homepage images": []
-  }
+  "homepage images": [],
+  "images": [
+    "/assests/images/hero1.jpg",
+    "/assests/images/hero2.jpg"
+  ]
+}
