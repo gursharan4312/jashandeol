@@ -28,8 +28,11 @@ function ContactSection() {
       .then(() => {
         setFormResponse({ color: "success", message: "Message Sent!" });
         setIsSubmitting(false);
+        setName("");
+        setEmail("");
+        setMessage("");
       })
-      .catch((error) => {
+      .catch(() => {
         setFormResponse({ color: "error", message: "Someting went wrong" });
         setIsSubmitting(false);
       });
@@ -85,7 +88,7 @@ function ContactSection() {
         </Button>
         {isSubmitting && <Loader />}
         {formResoponse.message !== "" && (
-          <Alert color={formResoponse.color} className="m-2">
+          <Alert color={formResoponse.color} className="my-2">
             {formResoponse.message}
           </Alert>
         )}
