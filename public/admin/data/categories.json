@@ -6,12 +6,12 @@
       "images": [
         "/assests/images/02.jpg",
         "/assests/images/03.jpg",
-        "/assests/images/screen-shot-2019-10-06-at-12.17.18-am.png"
+        "/assests/images/jashan-deol-2.jpg"
       ]
     },
     {
       "name": "Products",
-      "thumbnail": "/assests/images/hero2.jpg",
+      "thumbnail": "/assests/images/img_5026-edit.jpg",
       "images": [
         "/assests/images/02.jpg",
         "/assests/images/03.jpg",
@@ -22,9 +22,9 @@
       "name": "Landscape",
       "thumbnail": "/assests/images/jdeol_day_to_night.jpg",
       "images": [
-        "/assests/images/hero1.jpg",
-        "/assests/images/hero2.jpg",
-        "/assests/images/profile.jpg"
+        "/assests/images/jdeol_day_to_night.jpg",
+        "/assests/images/02.jpg",
+        "/assests/images/nature.jpg"
       ]
     }
   ]
