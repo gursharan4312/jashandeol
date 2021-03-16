@@ -4,11 +4,19 @@ import Footer from "./Footer";
 
 function Layout({ className, type, children }) {
   return (
-    <>
+    <div
+      className="d-flex flex-column justify-content-between"
+      style={{ minHeight: "100vh" }}
+    >
       <Header type={type} />
-      <main className={className}>{children}</main>
-      <Footer />
-    </>
+      <main
+        className={`${className} flex-1`}
+        style={{ paddingTop: type === "home" ? "0" : "90px" }}
+      >
+        {children}
+      </main>
+      {type !== "home" && <Footer />}
+    </div>
   );
 }
 

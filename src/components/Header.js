@@ -43,14 +43,24 @@ function Header({ type }) {
         expand="md"
         className={type === "home" ? (!scrolled ? "" : "bg-dark") : "bg-dark"}
       >
-        <NavbarBrand href="/">JashanDeol</NavbarBrand>
+        <NavbarBrand
+          href="/"
+          style={{
+            letterSpacing: "8px",
+            textTransform: "uppercase",
+            fontsize: "2rem",
+          }}
+        >
+          JashanDeol
+          {/* <br /> */}
+          <span style={{ fontSize: "0.8rem", display: "block" }}>
+            PHOTOGRAPHER
+          </span>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse isOpen={isOpen} navbar className="text-uppercase">
           <Nav className="ml-auto" navbar>
-            <NavItem className="mx-2">
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar className="mx-2">
+            {/* <UncontrolledDropdown nav inNavbar className="mx-2">
               <DropdownToggle nav caret>
                 Portfolio
               </DropdownToggle>
@@ -68,10 +78,16 @@ function Header({ type }) {
                   <DropdownItem>Landscape</DropdownItem>
                 </Link>
               </DropdownMenu>
-            </UncontrolledDropdown>
-            <a href="/#contact" className=" btn btn-primary mx-2">
+            </UncontrolledDropdown> */}
+            <NavItem className="mx-2">
+              <NavLink href="/portfolio">portfolio</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="/contact">Contact</NavLink>
+            </NavItem>
+            {/* <a href="/#contact" className=" btn btn-primary mx-2">
               Contact me
-            </a>
+            </a> */}
           </Nav>
         </Collapse>
       </Navbar>

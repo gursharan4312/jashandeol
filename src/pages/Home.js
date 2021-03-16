@@ -9,9 +9,9 @@ function Home() {
   return (
     <Layout type="home">
       <Hero />
-      <AboutMe />
-      <Portfolio />
-      <ContactSection />
+      {/* <AboutMe /> */}
+      {/* <Portfolio /> */}
+      {/* <ContactSection /> */}
     </Layout>
   );
 }

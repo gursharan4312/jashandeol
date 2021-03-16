@@ -39,6 +39,7 @@ function Portfolio({ match }) {
         });
       }
     };
+
     if (categories.length === 0) {
       getCategories();
     } else {

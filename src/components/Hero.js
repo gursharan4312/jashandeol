@@ -27,7 +27,7 @@ function Hero() {
           caption: "",
           key: i,
         }))}
-        controls={false}
+        // controls={false}
         // interval={1000000}
       />
       <div className="hero-inner-container text-center">
