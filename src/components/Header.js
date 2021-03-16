@@ -7,12 +7,12 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  // UncontrolledDropdown,
+  // DropdownToggle,
+  // DropdownMenu,
+  // DropdownItem,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Header({ type }) {
   const [isOpen, setIsOpen] = useState(false);

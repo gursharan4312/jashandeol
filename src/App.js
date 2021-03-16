@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
-import { default as PortfolioComponent } from "./components/Portfolio";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Categories from "./pages/Categories";

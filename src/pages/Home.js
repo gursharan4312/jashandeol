@@ -1,9 +1,9 @@
 import React from "react";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
-import AboutMe from "../components/AboutMe";
+// import Portfolio from "../components/Portfolio";
+// import AboutMe from "../components/AboutMe";
 
 function Home() {
   return (

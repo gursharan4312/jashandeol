@@ -57,25 +57,36 @@ collections:
   - label: "Site Data"
     name: "site data"
     files:
-      - label: "categories"
-        label_singular: "category"
-        name: "categories"
-        file: "public/admin/data/categories.json"
+      # - label: "categories"
+      #   label_singular: "category"
+      #   name: "categories"
+      #   file: "public/admin/data/categories.json"
+      #   fields:
+      #     - name: categories
+      #       label: Categoriesconfig chane
+      #       label_singular: category
+      #       widget: list
+      #       collapsed: true
+      #       fields:
+      #         - { label: "Name", name: "name", widget: "string" }
+      #         - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      #         - {
+      #             label: "Images",
+      #             name: "images",
+      #             widget: "list",
+      #             field: { label: "Image", name: "image", widget: "image" },
+      #           }
+      - label: "All images"
+        label_singular: "image"
+        name: "All images"
+        file: "public/admin/data/allImages.json"
         fields:
-          - name: categories
-            label: Categoriesconfig chane
-            label_singular: category
+          - name: Images
+            label: Images
+            label_singular: Image
             widget: list
             collapsed: true
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Featured Image", name: "thumbnail", widget: "image" }
-              - {
-                  label: "Images",
-                  name: "images",
-                  widget: "list",
-                  field: { label: "Image", name: "image", widget: "image" },
-                }
+            field: { label: "Image", name: "image", widget: "image" }
       - label: "homepage images"
         name: "homepage images"
         file: "public/admin/data/heroImages.json"
