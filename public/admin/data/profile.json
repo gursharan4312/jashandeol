@@ -1,5 +1,8 @@
 {
   "header": "Hi there, my name is Jashandeol!",
   "details": "I'm a professional photographer and filmmaker located in vancouver,BC",
-  "image": "/assests/images/profile.jpg"
+  "image": "/assests/images/profile.jpg",
+  "phoneNumber": "6049615641",
+  "email": "jashandeol000@gmail.com",
+  "instaUsername": "jashankarandeepsinghdeol"
 }
