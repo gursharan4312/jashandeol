@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import Loader from "./Loader";
+import { IoLogoInstagram } from "react-icons/io";
+import { BiPhoneCall } from "react-icons/bi";
+import { HiOutlineMail } from "react-icons/hi";
 
 function AboutMe() {
-  const [profile, setProfile] = useState({
-    header: "",
-    details: "",
-    image: "",
-  });
+  const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -15,11 +14,7 @@ function AboutMe() {
       setLoading(true);
       let data = await fetch("admin/data/profile.json");
       data = await data.json();
-      setProfile({
-        header: data.header,
-        details: data.details,
-        image: data.image,
-      });
+      setProfile({ ...data });
       setLoading(false);
     }
     getProfile();
@@ -37,6 +32,25 @@ function AboutMe() {
           <Col>
             <h1>{profile.header}</h1>
             <p>{profile.details}</p>
+            <ListGroup flush>
+              {profile.phoneNumber && (
+                <ListGroupItem>
+                  {" "}
+                  <BiPhoneCall /> : {profile.phoneNumber}
+                </ListGroupItem>
+              )}
+              {profile.email && (
+                <ListGroupItem>
+                  {" "}
+                  <HiOutlineMail /> : {profile.email}
+                </ListGroupItem>
+              )}
+              {profile.instaUsername && (
+                <ListGroupItem>
+                  <IoLogoInstagram /> : {profile.instaUsername}
+                </ListGroupItem>
+              )}
+            </ListGroup>
           </Col>
         </Row>
       )}

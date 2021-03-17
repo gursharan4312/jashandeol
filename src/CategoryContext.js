@@ -8,12 +8,19 @@ const Reducer = (state, action) => {
       return { loading: false, categories: action.payload };
     case "CATEGORY_REQUEST_ERROR":
       return { loading: false, error: action.payload, categories: [] };
+    case "ALL_IMAGES_SUCCESS":
+      return { loading: false, allImages: action.payload };
     default:
       return state;
   }
 };
 
-const initialState = { loading: false, error: "", categories: [] };
+const initialState = {
+  loading: false,
+  error: "",
+  categories: [],
+  allImages: [],
+};
 
 export const Context = createContext(initialState);
 

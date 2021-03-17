@@ -8,13 +8,15 @@ function Layout({ className, type, children }) {
       className="d-flex flex-column justify-content-between"
       style={{ minHeight: "100vh" }}
     >
-      <Header type={type} />
-      <main
-        className={`${className} flex-1`}
-        style={{ paddingTop: type === "home" ? "0" : "90px" }}
-      >
-        {children}
-      </main>
+      <div>
+        <Header type={type} />
+        <main
+          className={`${className} flex-1`}
+          style={{ paddingTop: type === "home" ? "0" : "90px" }}
+        >
+          {children}
+        </main>
+      </div>
       {type !== "home" && <Footer />}
     </div>
   );

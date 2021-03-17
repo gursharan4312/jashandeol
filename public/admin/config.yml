@@ -102,6 +102,9 @@ collections:
         fields:
           - { label: "Header", name: "header", widget: "text" }
           - { label: "Details", name: "details", widget: "text" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "text" }
+          - { label: "Email", name: "email", widget: "text" }
+          - { label: "Instagram Username", name: "instaUsername", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
           # - name: profile
           #   label: profile
