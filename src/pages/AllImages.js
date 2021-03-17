@@ -6,12 +6,14 @@ import { Container, Col } from "reactstrap";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Loader from "../components/Loader";
 import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 function AllImages() {
   const grid = useRef(null);
   const [state, dispatch] = useContext(Context);
   const { loading, allImages } = state;
 
+  const [images, setImages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
   const toogleLightbox = (i = 0) => {
@@ -39,9 +41,11 @@ function AllImages() {
     };
     if (allImages.length <= 0) {
       getCategories();
+    } else {
+      setImages([...allImages]);
     }
     if (grid.current !== null) grid.current.positionItems();
-  }, [dispatch, allImages.length]);
+  }, [dispatch, allImages.length, allImages]);
   return (
     <Layout type="other" className="portfolio-page">
       {loading && <Loader />}
@@ -68,21 +72,17 @@ function AllImages() {
           </MagicGrid>
         )}
       </Container>
-      {isOpen && (
+      {images && isOpen && (
         <Lightbox
-          mainSrc={allImages[photoIndex]}
-          nextSrc={allImages[(photoIndex + 1) % allImages.length]}
-          prevSrc={
-            allImages[(photoIndex + allImages.length - 1) % allImages.length]
-          }
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
           onCloseRequest={toogleLightbox}
           onMovePrevRequest={() =>
-            setPhotoIndex(
-              (photoIndex + allImages.length - 1) % allImages.length
-            )
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
           }
           onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % allImages.length)
+            setPhotoIndex((photoIndex + 1) % images.length)
           }
         />
       )}
