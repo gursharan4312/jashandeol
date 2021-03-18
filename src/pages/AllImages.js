@@ -1,12 +1,74 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
-import MagicGrid from "react-magic-grid";
 import { Context } from "../CategoryContext";
-import { Container, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Loader from "../components/Loader";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+
+const Gallery = ({ images, toogleLightbox }) => {
+  var colNum = 0;
+  var col1Images = [];
+  var col2Images = [];
+  var col3Images = [];
+  var col4Images = [];
+  images.forEach((image) => {
+    if (colNum === 0) col1Images.push(image);
+    else if (colNum === 1) col2Images.push(image);
+    else if (colNum === 2) col3Images.push(image);
+    else if (colNum === 3) col4Images.push(image);
+    colNum = (colNum + 1) % 4;
+  });
+  return (
+    <>
+      <div className="col-10 col-lg-3 col-md-4 col-sm-6 mx-auto">
+        {col1Images.map((image, i) => (
+          <LazyLoadImage
+            alt="category"
+            src={image}
+            className="img-fluid my-2"
+            effect="blur"
+            onClick={() => toogleLightbox(image)}
+          />
+        ))}
+      </div>
+      <div className="col-10 col-lg-3 col-md-4  col-sm-6 mx-auto">
+        {col2Images.map((image, i) => (
+          <LazyLoadImage
+            alt="category"
+            src={image}
+            className="img-fluid my-2 img"
+            effect="blur"
+            onClick={() => toogleLightbox(image)}
+          />
+        ))}
+      </div>
+      <div className="col-10 col-lg-3 col-md-4  col-sm-6 mx-auto">
+        {col3Images.map((image, i) => (
+          <LazyLoadImage
+            alt="category"
+            src={image}
+            className="img-fluid my-2"
+            effect="blur"
+            onClick={() => toogleLightbox(image)}
+          />
+        ))}
+      </div>
+      <div className="col-10 col-lg-3 col-md-4  col-sm-6 mx-auto">
+        {col4Images.map((image, i) => (
+          <LazyLoadImage
+            alt="category"
+            src={image}
+            className="img-fluid my-2"
+            effect="blur"
+            onClick={() => toogleLightbox(image)}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 function AllImages() {
   const grid = useRef(null);
@@ -16,8 +78,8 @@ function AllImages() {
   const [images, setImages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
-  const toogleLightbox = (i = 0) => {
-    setPhotoIndex(i);
+  const toogleLightbox = (image) => {
+    setPhotoIndex(allImages.indexOf(image) || 0);
     setIsOpen(!isOpen);
   };
 
@@ -50,27 +112,9 @@ function AllImages() {
     <Layout type="other" className="portfolio-page">
       {loading && <Loader />}
       <Container fluid className="gallery-images">
-        {allImages.length > 0 && (
-          <MagicGrid gutter={0} items={allImages.length} ref={grid}>
-            {allImages.map((image, i) => (
-              <Col
-                sm={6}
-                lg={3}
-                md={4}
-                key={i}
-                className="img-col"
-                onClick={() => toogleLightbox(i)}
-              >
-                <LazyLoadImage
-                  alt="category"
-                  src={image} // use normal <img> attributes as props
-                  className="img-fluid my-2"
-                  effect="blur"
-                />
-              </Col>
-            ))}
-          </MagicGrid>
-        )}
+        <Row>
+          <Gallery images={allImages} toogleLightbox={toogleLightbox} />
+        </Row>
       </Container>
       {images && isOpen && (
         <Lightbox
