@@ -45,10 +45,10 @@ html {
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  min-height: 100vh;
+  overflow-x: hidden;
+
   // background-color: #333;
 }
-
 header {
   nav {
     background: transparent;
@@ -65,11 +65,38 @@ header {
 
 .hero-container {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
   position: relative;
   max-height: 1080px;
   // max-width: 1920px;
   margin: 0 auto;
   .carousel {
+    display: relative;
+    .carousel-control-prev {
+      position: relative;
+      top: -160px;
+      left: calc(100vw - 160px);
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background: #343a40;
+      }
+    }
+    .carousel-control-next {
+      position: relative;
+      top: -220px;
+      left: calc(100vw - 80px);
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background: #343a40;
+      }
+    }
     height: 100%;
     .carousel-inner {
       height: 100%;
