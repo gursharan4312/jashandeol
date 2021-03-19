@@ -24,19 +24,11 @@ function Hero() {
         items={images.map((image, i) => ({
           src: image,
           altText: "slide",
-          caption: "",
+          header: "Jashan Deol",
+          caption: "Photographer & FilmMaker",
           key: i,
         }))}
-        enableTouch={true}
-        // controls={false}
-        // interval={1000000}
       />
-      <div className="hero-inner-container text-center">
-        <div className="hero-content">
-          <h3>Jashan Deol</h3>
-          <h1>Photographer &amp; FilmMaker</h1>
-        </div>
-      </div>
     </div>
   );
 }
