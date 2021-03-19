@@ -35,19 +35,25 @@ function AboutMe() {
             <ListGroup flush>
               {profile.phoneNumber && (
                 <ListGroupItem>
-                  {" "}
-                  <BiPhoneCall /> : {profile.phoneNumber}
+                  <a href={`tel:${profile.phoneNumber}`}>
+                    <BiPhoneCall /> : {profile.phoneNumber}
+                  </a>
                 </ListGroupItem>
               )}
               {profile.email && (
                 <ListGroupItem>
-                  {" "}
-                  <HiOutlineMail /> : {profile.email}
+                  <a href={`mailto:${profile.emai}`}>
+                    <HiOutlineMail /> : {profile.email}
+                  </a>
                 </ListGroupItem>
               )}
               {profile.instaUsername && (
                 <ListGroupItem>
-                  <IoLogoInstagram /> : {profile.instaUsername}
+                  <a
+                    href={`https://www.instagram.com/${profile.instaUsername}/`}
+                  >
+                    <IoLogoInstagram /> : {profile.instaUsername}
+                  </a>
                 </ListGroupItem>
               )}
             </ListGroup>
