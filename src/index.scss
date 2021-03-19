@@ -97,17 +97,18 @@ footer {
   color: #fff;
   padding: 2em 0;
 }
-
-.portfolio-page {
-  .gallery-images {
-    overflow: hidden;
-    img {
-      transition: all 0.3s ease-in-out;
-      vertical-align: middle;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.03);
-      }
+.gallery {
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  img {
+    width: 100% !important;
+    height: auto !important;
+    transition: all 0.3s ease-in-out;
+    vertical-align: middle;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
     }
   }
 }

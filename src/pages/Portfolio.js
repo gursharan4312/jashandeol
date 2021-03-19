@@ -31,7 +31,7 @@ function Portfolio() {
     <Layout type="other" className="portfolio-page">
       {loading && <Loader />}
       {error && <Alert color="danger">Something went wrong.</Alert>}
-      <Container fluid className="gallery-images">
+      <Container fluid>
         <Row>
           <Gallery images={allImages} />
         </Row>
