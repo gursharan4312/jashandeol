@@ -1,43 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
-        );
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
-}
-
-$min_width: 320px;
-$max_width: 1200px;
-$min_font: 16px;
-$max_font: 20px;
-
-$xsmallwidth: 576px;
-$smallwidth: 768px;
-$mediumwidth: 992px;
-$largewidth: 1200px;
-
 html {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
   transition: all 0.3s ease-in-out;
   scroll-behavior: smooth;
 }
@@ -69,7 +32,6 @@ header {
   overflow: hidden;
   position: relative;
   max-height: 1080px;
-  // max-width: 1920px;
   margin: 0 auto;
   .carousel {
     display: relative;
@@ -105,7 +67,6 @@ header {
         img {
           filter: brightness(80%);
           object-fit: cover;
-          // width: 100%;
           height: 100%;
         }
       }
@@ -133,52 +94,6 @@ header {
   }
 }
 
-.portfolio {
-  .categories {
-    .category {
-      overflow: hidden;
-      img {
-        transition: all 0.5s ease-in-out;
-        @media screen and (max-width: $smallwidth) {
-          filter: brightness(70%);
-        }
-      }
-      .category-inner {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        span {
-          color: #fff;
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-          text-transform: uppercase;
-          font-weight: bold;
-          @media screen and (max-width: $smallwidth) {
-            opacity: 1;
-          }
-        }
-      }
-      &:hover {
-        cursor: pointer;
-        img {
-          filter: brightness(40%);
-          transform: scale(1.2);
-        }
-        .category-inner {
-          span {
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-}
-
 footer {
   background: #000;
   display: flex;
@@ -191,14 +106,11 @@ footer {
   .gallery-images {
     overflow: hidden;
     img {
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
       vertical-align: middle;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
       &:hover {
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.03);
       }
     }
   }
