@@ -14,15 +14,21 @@ const Gallery = ({ images }) => {
   return (
     <div className="gallery">
       <ResponsiveMasonry
-        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4 }}
+        columnsCountBreakPoints={{
+          420: 1,
+          600: 2,
+          768: 3,
+          1200: 4,
+          1920: 5,
+        }}
       >
-        <Masonry gutter="10px">
+        <Masonry gutter="0.3rem">
           {images.map((image, i) => (
             <LazyLoadImage
               key={i}
               alt="category"
               src={image}
-              className="img-fluid my-1"
+              className="img-fluid"
               effect="blur"
               onClick={() => toogleLightbox(image)}
             />

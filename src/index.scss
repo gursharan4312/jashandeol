@@ -100,15 +100,17 @@ footer {
 .gallery {
   height: 100%;
   width: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
   padding: 0 1rem;
   img {
-    width: 100% !important;
-    height: auto !important;
     transition: all 0.3s ease-in-out;
     vertical-align: middle;
+    position: relative;
+    z-index: 1;
     &:hover {
       cursor: pointer;
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
   }
 }
