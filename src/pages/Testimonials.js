@@ -44,25 +44,27 @@ function Testimonials() {
     <Layout>
       <Container className="pt-4">
         <h2>Testimonials</h2>
-        <div className="testimonials-container mt-5 pt-4">
-          <div className="testimonial d-flex justify-content-between align-items-center">
-            <img
-              src="/assests/icons/left.svg"
-              alt="previous testimonial"
-              onClick={previous}
-            />
-            <div className="text w-75 ">
-              <img src="/assests/icons/quote.svg" alt="quote" />
-              <p>{testimonials[selectedIndex].text}</p>
-              <small>{testimonials[selectedIndex].by}</small>
+        {testimonials && selectedIndex !== null && (
+          <div className="testimonials-container mt-5 pt-4">
+            <div className="testimonial d-flex justify-content-between align-items-center">
+              <img
+                src="/assests/icons/left.svg"
+                alt="previous testimonial"
+                onClick={previous}
+              />
+              <div className="text w-75 ">
+                <img src="/assests/icons/quote.svg" alt="quote" />
+                <p>{testimonials[selectedIndex].text}</p>
+                <small>{testimonials[selectedIndex].by}</small>
+              </div>
+              <img
+                src="/assests/icons/right.svg"
+                alt="next testimonial"
+                onClick={next}
+              />
             </div>
-            <img
-              src="/assests/icons/right.svg"
-              alt="next testimonial"
-              onClick={next}
-            />
           </div>
-        </div>
+        )}
       </Container>
     </Layout>
   );
