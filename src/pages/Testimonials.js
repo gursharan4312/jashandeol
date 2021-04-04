@@ -37,7 +37,7 @@ function Testimonials() {
   useEffect(() => {
     setTimeout(() => {
       next();
-    }, 000);
+    }, 5000);
   }, [selectedIndex, next]);
   return (
     <Layout>
