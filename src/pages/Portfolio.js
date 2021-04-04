@@ -15,9 +15,9 @@ function Portfolio() {
     let getImages = async () => {
       setLoading(true);
       try {
-        let data = await fetch("/admin/data/allImages.json");
+        let data = await fetch("/admin/data/portfolio.json");
         data = await data.json();
-        setAllImages([...data.Images]);
+        setAllImages([...data.images]);
       } catch (e) {
         setError(e);
       }
