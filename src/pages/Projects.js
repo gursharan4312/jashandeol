@@ -77,7 +77,7 @@ function Projects({ match }) {
     setSelectedProject(
       projects.filter((project) => project.name === projectName)[0]
     );
-  }, [projectName]);
+  }, [projectName, projects]);
   return (
     <Layout>
       <Container fluid className="projects-container">
