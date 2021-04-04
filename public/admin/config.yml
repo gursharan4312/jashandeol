@@ -31,15 +31,15 @@ collections:
             fields:
               - { label: "Project Name", name: "name", widget: "string" }
               - {
+                  label: "Project Details",
+                  name: "details",
+                  widget: "markdown",
+                }
+              - {
                   label: "Images",
                   name: "images",
                   widget: "list",
                   field: { label: "Image", name: "image", widget: "image" },
-                }
-              - {
-                  label: "Project Details",
-                  name: "details",
-                  widget: "markdown",
                 }
       - label: "homepage images"
         name: "homepage images"
@@ -54,13 +54,42 @@ collections:
         name: "profile details"
         file: "public/admin/data/profile.json"
         fields:
-          - { label: "Header", name: "header", widget: "text" }
+          - { label: "Header", name: "header", widget: "string" }
           - { label: "Details", name: "details", widget: "text" }
-          - { label: "Phone Number", name: "phoneNumber", widget: "text" }
-          - { label: "Email", name: "email", widget: "text" }
+          - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
           - {
               label: "Instagram Username",
               name: "instaUsername",
-              widget: "text",
+              widget: "string",
             }
+          - { label: "Facebook link", name: "fb", widget: "string" }
+          - { label: "Twitter link", name: "twitter", widget: "string" }
           - { label: "Image", name: "image", widget: "image" }
+      - label: "About"
+        name: "about"
+        file: "public/admin/data/about.json"
+        fields:
+          - { label: "About Me", name: "aboutMe", widget: "markdown" }
+          - { label: "Image", name: "aboutMeImage", widget: "image" }
+          - {
+              label: "Awards",
+              name: "awards",
+              widget: "list",
+              field: { label: "Award", name: "award", widget: "string" },
+            }
+          - {
+              label: "Exhibitions",
+              name: "exhibitions",
+              widget: "list",
+              field:
+                { label: "Exhibition", name: "exhibition", widget: "string" },
+            }
+          - {
+              label: "Clients",
+              name: "clients",
+              widget: "list",
+              fields:
+                -{ label: "Logo", name: "logo", widget: "image" },
+                -{ label: "Name", name: "name", widget: "string" },
+            }
