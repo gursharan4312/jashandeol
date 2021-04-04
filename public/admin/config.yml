@@ -39,7 +39,7 @@ collections:
                   label: "Images",
                   name: "images",
                   widget: "list",
-                  field: { label: "Image", name: "image", widget: "image" },
+                  field: { label: "Image", name: "image", widget: "image" }
                 }
       - label: "homepage images"
         name: "homepage images"
@@ -76,20 +76,20 @@ collections:
               label: "Awards",
               name: "awards",
               widget: "list",
-              field: { label: "Award", name: "award", widget: "string" },
+              field: { label: "Award", name: "award", widget: "string" }
             }
           - {
               label: "Exhibitions",
               name: "exhibitions",
               widget: "list",
               field:
-                { label: "Exhibition", name: "exhibition", widget: "string" },
+                { label: "Exhibition", name: "exhibition", widget: "string" }
             }
           - {
               label: "Clients",
               name: "clients",
               widget: "list",
               fields:
-                -{ label: "Logo", name: "logo", widget: "image" },
-                -{ label: "Name", name: "name", widget: "string" },
+                -{ label: "Logo", name: "logo", widget: "image" }
+                -{ label: "Name", name: "name", widget: "string" }
             }
