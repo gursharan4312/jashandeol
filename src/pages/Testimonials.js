@@ -38,7 +38,8 @@ function Testimonials() {
     setTimeout(() => {
       next();
     }, 5000);
-  }, [selectedIndex, next]);
+    // eslint-disable-next-line
+  }, [selectedIndex]);
   return (
     <Layout>
       <Container className="pt-4">
