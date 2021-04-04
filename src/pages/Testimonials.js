@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container } from "reactstrap";
 import Layout from "../components/Layout";
+import Loader from "../components/Loader";
 
 function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(
-    testimonials.length >= 0 ? 0 : null
-  );
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const intervalRef = useRef(null);
   const next = () =>
     setSelectedIndex((selectedIndex + 1) % testimonials.length);
   const previous = () =>
@@ -32,10 +32,12 @@ function Testimonials() {
           "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       },
     ]);
+    setSelectedIndex(0);
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
+    clearTimeout(intervalRef.current);
+    intervalRef.current = setTimeout(() => {
       next();
     }, 5000);
     // eslint-disable-next-line
@@ -44,7 +46,7 @@ function Testimonials() {
     <Layout>
       <Container className="pt-4">
         <h2>Testimonials</h2>
-        {testimonials && selectedIndex !== null && (
+        {testimonials && selectedIndex !== null ? (
           <div className="testimonials-container mt-5 pt-4">
             <div className="testimonial d-flex justify-content-between align-items-center">
               <img
@@ -64,6 +66,8 @@ function Testimonials() {
               />
             </div>
           </div>
+        ) : (
+          <Loader />
         )}
       </Container>
     </Layout>
