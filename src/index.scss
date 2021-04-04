@@ -156,6 +156,14 @@ footer {
   }
 }
 
+.testimonials-container {
+  .testimonial {
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
 .loader-container {
   position: fixed;
   top: 0;

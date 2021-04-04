@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import Testimonials from "./pages/Testimonials";
 function App() {
   useEffect(() => {
     let vh = window.innerHeight * 0.01;
@@ -19,6 +20,7 @@ function App() {
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/testimonials" component={Testimonials} />
       <Route extact path="/" component={Home} />
     </Switch>
   );
