@@ -83,7 +83,16 @@ function Header({ type }) {
               <NavLink href="/portfolio">portfolio</NavLink>
             </NavItem>
             <NavItem className="mx-2">
+              <NavLink href="/projects">projects</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="/about">about</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
               <NavLink href="/contact">Contact</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="/testimonials">testimonials</NavLink>
             </NavItem>
             {/* <a href="/#contact" className=" btn btn-primary mx-2">
               Contact me

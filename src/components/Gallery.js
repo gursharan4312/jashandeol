@@ -31,6 +31,7 @@ const Gallery = ({ images }) => {
               className="img-fluid"
               effect="blur"
               onClick={() => toogleLightbox(image)}
+              loading="lazy"
             />
           ))}
         </Masonry>

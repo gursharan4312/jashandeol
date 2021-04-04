@@ -24,6 +24,10 @@ header {
     }
   }
 }
+h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
 
 .hero-container {
   height: 100vh;
@@ -116,9 +120,35 @@ footer {
 }
 
 .aboutme-container {
-  a {
-    text-decoration: none;
-    color: #000;
+  .about-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 2fr 1fr;
+    }
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+      .about-me-img {
+        grid-row: 1;
+      }
+    }
+  }
+  .clients-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .client {
+      margin: 0 1rem;
+      text-align: center;
+      img {
+        max-width: 120px;
+        margin-bottom: 0.5rem;
+        border-radius: 50%;
+      }
+    }
   }
 }
 

@@ -1,66 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import Loader from "./Loader";
-import { IoLogoInstagram } from "react-icons/io";
-import { BiPhoneCall } from "react-icons/bi";
-import { HiOutlineMail } from "react-icons/hi";
-
 function AboutMe() {
-  const [profile, setProfile] = useState({});
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    async function getProfile() {
-      setLoading(true);
-      let data = await fetch("admin/data/profile.json");
-      data = await data.json();
-      setProfile({ ...data });
-      setLoading(false);
-    }
-    getProfile();
-  }, []);
-
   return (
-    <Container className="aboutme-container py-4">
-      {loading ? (
-        <Loader />
-      ) : (
-        <Row className="py-4 my-4">
-          <Col md={4}>
-            <img src={profile.image} alt="jashandeol" className="img-fluid" />
-          </Col>
-          <Col>
-            <h1>{profile.header}</h1>
-            <p>{profile.details}</p>
-            <ListGroup flush>
-              {profile.phoneNumber && (
-                <ListGroupItem>
-                  <a href={`tel:${profile.phoneNumber}`}>
-                    <BiPhoneCall /> : {profile.phoneNumber}
-                  </a>
-                </ListGroupItem>
-              )}
-              {profile.email && (
-                <ListGroupItem>
-                  <a href={`mailto:${profile.emai}`}>
-                    <HiOutlineMail /> : {profile.email}
-                  </a>
-                </ListGroupItem>
-              )}
-              {profile.instaUsername && (
-                <ListGroupItem>
-                  <a
-                    href={`https://www.instagram.com/${profile.instaUsername}/`}
-                  >
-                    <IoLogoInstagram /> : {profile.instaUsername}
-                  </a>
-                </ListGroupItem>
-              )}
-            </ListGroup>
-          </Col>
-        </Row>
-      )}
-    </Container>
+    <>
+      <h2>About Me</h2>
+      <div className="about-section">
+        <div className="about-me-text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>{" "}
+          <p>
+            {" "}
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random
+            text. It has roots in a piece of classical Latin literature from 45
+            BC, making it over 2000 years old.
+          </p>
+          <p>
+            {" "}
+            Richard McClintock, a Latin professor at Hampden-Sydney College in
+            Virginia, This book is a treatise on the theory of ethics, very
+            popular during the Renaissance. The first line of Lorem Ipsum,
+            "Lorem ipsum dolor sit amet..", comes from a line in section
+            1.10.32.
+          </p>
+        </div>
+        <div className="about-me-img">
+          <img
+            src="/assests/images/jdeol_portrait_jashan.jpg"
+            className="img-fluid"
+          />
+        </div>
+      </div>
+    </>
   );
 }
 

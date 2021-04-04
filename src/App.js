@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
 function App() {
   useEffect(() => {
     let vh = window.innerHeight * 0.01;
@@ -16,6 +17,7 @@ function App() {
   return (
     <Switch>
       <Route path="/portfolio" component={Portfolio} />
+      <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route extact path="/" component={Home} />
     </Switch>
