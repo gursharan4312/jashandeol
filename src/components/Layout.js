@@ -12,7 +12,7 @@ function Layout({ className, type, children }) {
         <Header type={type} />
         <main
           className={`${className} flex-1`}
-          style={{ marginTop: type === "home" ? "0" : "90px" }}
+          style={{ marginTop: type === "home" ? "0" : "110px" }}
         >
           {children}
         </main>

@@ -13,6 +13,7 @@ body {
 }
 header {
   nav {
+    top: 20px !important;
     background: transparent;
     z-index: 1000 !important;
     ul {
@@ -22,6 +23,9 @@ header {
         }
       }
     }
+  }
+  .nav-top {
+    padding: 0.5rem 1rem;
   }
 }
 h2 {
