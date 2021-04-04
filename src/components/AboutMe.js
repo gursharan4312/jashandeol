@@ -34,6 +34,7 @@ function AboutMe() {
           <img
             src="/assests/images/jdeol_portrait_jashan.jpg"
             className="img-fluid"
+            alt="about me"
           />
         </div>
       </div>
