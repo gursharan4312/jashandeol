@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
+import Projects from "./pages/Projects";
 function App() {
   useEffect(() => {
     let vh = window.innerHeight * 0.01;
@@ -18,6 +19,8 @@ function App() {
   return (
     <Switch>
       <Route path="/portfolio" component={Portfolio} />
+      <Route path="/projects/:projectName" component={Projects} />
+      <Route path="/projects" component={Projects} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/testimonials" component={Testimonials} />
