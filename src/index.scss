@@ -214,6 +214,10 @@ footer {
     img {
       cursor: pointer;
     }
+    .text p,
+    .text small {
+      margin-left: 1rem;
+    }
   }
 }
 
