@@ -8,7 +8,12 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { BiPhoneCall } from "react-icons/bi";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -84,6 +89,11 @@ function Header({ type }) {
             {data.twitter && (
               <a href={data.twitter}>
                 <FaTwitter className="mx-2" />
+              </a>
+            )}
+            {data.linedIn && (
+              <a href={data.linedIn}>
+                <FaLinkedinIn className="mx-2" />
               </a>
             )}
           </div>

@@ -65,6 +65,7 @@ collections:
             }
           - { label: "Facebook link", name: "fb", widget: "string" }
           - { label: "Twitter link", name: "twitter", widget: "string" }
+          - { label: "LinkedIn link", name: "linkedIn", widget: "string" }
           - { label: "Image", name: "image", widget: "image" }
       - label: "About"
         name: "about"

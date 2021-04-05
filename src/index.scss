@@ -25,9 +25,11 @@ body {
   }
 }
 header {
+  .fixed-top {
+    z-index: 999 !important;
+  }
   nav {
     background: transparent;
-    z-index: 1000 !important;
     ul {
       li {
         a {
