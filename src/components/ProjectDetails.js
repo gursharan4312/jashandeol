@@ -10,7 +10,7 @@ function ProjectDetails({ name, images, details }) {
       </div>
       <div className="project-images">
         {images.map((image, i) => (
-          <img src={image} key={i} alt={name} className="img-fluid" />
+          <img src={image} key={i} alt={name} className="img-fluid mb-2" />
         ))}
       </div>
     </Container>

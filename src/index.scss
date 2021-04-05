@@ -96,7 +96,7 @@ h2 {
         background-color: #000;
         img {
           filter: brightness(80%);
-          object-fit: scale-down;
+          object-fit: cover;
           height: 100%;
         }
         .carousel-caption {
