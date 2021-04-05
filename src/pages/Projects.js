@@ -6,7 +6,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ProjectDetails from "../components/ProjectDetails";
 import Loader from "../components/Loader";
 
-function Projects({ match }) {
+function Projects() {
   const { projectName } = useParams();
   const history = useHistory();
 
@@ -14,23 +14,27 @@ function Projects({ match }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const getProjects = async () => {
+    setLoading(true);
+    let data = await fetch("/admin/data/projects.json");
+    data = await data.json();
+    setProjects([...data.projects]);
+    setLoading(false);
+  };
+
   useEffect(() => {
-    async function getContent() {
-      setLoading(true);
-      let data = await fetch("admin/data/projects.json");
-      data = await data.json();
-      setProjects([...data.projects]);
-      setLoading(false);
-    }
-    getContent();
+    getProjects();
   }, []);
 
-  useEffect(() => {}, []);
   useEffect(() => {
-    setSelectedProject(
-      projects.filter((project) => project.name === projectName)[0]
-    );
-  }, [projectName, projects]);
+    if (projects.length === 0 && projectName !== "") {
+      getProjects();
+    } else {
+      setSelectedProject(
+        projects.filter((project) => project.name === projectName)[0]
+      );
+    }
+  }, [projectName, projects, history]);
   return (
     <Layout>
       {loading && <Loader />}
@@ -43,7 +47,7 @@ function Projects({ match }) {
               420: 1,
               600: 2,
               768: 4,
-              1200: 7,
+              1200: 5,
               1920: 7,
             }}
           >

@@ -29,7 +29,7 @@ function Header({ type }) {
 
   useEffect(() => {
     async function getProfile() {
-      let data = await fetch("admin/data/profile.json");
+      let data = await fetch("/admin/data/profile.json");
       data = await data.json();
       setData({ ...data });
     }

@@ -1,8 +1,9 @@
 import Markdown from "markdown-to-jsx";
+import { Container } from "reactstrap";
 
 function ProjectDetails({ name, images, details }) {
   return (
-    <div className="project-details-continer">
+    <Container className="project-details-continer">
       <div className="project-details">
         <h2>{name}</h2>
         {details && <Markdown>{details}</Markdown>}
@@ -12,7 +13,7 @@ function ProjectDetails({ name, images, details }) {
           <img src={image} key={i} alt={name} className="img-fluid" />
         ))}
       </div>
-    </div>
+    </Container>
   );
 }
 
