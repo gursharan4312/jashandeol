@@ -11,8 +11,9 @@ function Layout({ className, type, children }) {
       <div>
         <Header type={type} />
         <main
-          className={`${className} flex-1`}
-          style={{ marginTop: type === "home" ? "0" : "120px" }}
+          className={`${className} flex-1 ${
+            type === "home" ? "home" : "no-home"
+          }`}
         >
           {children}
         </main>
