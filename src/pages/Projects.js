@@ -4,75 +4,28 @@ import { Container } from "reactstrap";
 import Layout from "../components/Layout";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ProjectDetails from "../components/ProjectDetails";
+import Loader from "../components/Loader";
 
 function Projects({ match }) {
   const { projectName } = useParams();
   const history = useHistory();
-  console.log(projectName);
+
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    setProjects([
-      {
-        name: "Project 1",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details:
-          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and ",
-      },
-      {
-        name: "Project 2",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details:
-          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and ",
-      },
-      {
-        name: "Project 3",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details: "",
-      },
-      {
-        name: "Project 4",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details: "",
-      },
-      {
-        name: "Project 5",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details: "",
-      },
-      {
-        name: "Project 6",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details: "",
-      },
-      {
-        name: "Project 1",
-        images: [
-          "/assests/images/jdeol_portrait_ranaranbir.jpg",
-          "/assests/images/jdeol_portrait_simran_artgallery_01.jpg",
-        ],
-        details: "",
-      },
-    ]);
+    async function getContent() {
+      setLoading(true);
+      let data = await fetch("admin/data/projects.json");
+      data = await data.json();
+      setProjects([...data.projects]);
+      setLoading(false);
+    }
+    getContent();
   }, []);
+
+  useEffect(() => {}, []);
   useEffect(() => {
     setSelectedProject(
       projects.filter((project) => project.name === projectName)[0]
@@ -80,6 +33,7 @@ function Projects({ match }) {
   }, [projectName, projects]);
   return (
     <Layout>
+      {loading && <Loader />}
       <Container fluid className="projects-container">
         {selectedProject ? (
           <ProjectDetails {...selectedProject} />
