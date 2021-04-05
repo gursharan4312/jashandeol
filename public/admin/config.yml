@@ -92,4 +92,16 @@ collections:
             collapsed: true
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Logo", name: "logo", widget: "image" }
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "public/admin/data/testimonials.json"
+        fields:
+          - name: testimonials
+            label: Testimonials
+            label_singular: Testimonial
+            widget: list
+            collapsed: true
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Feedback", name: "details", widget: "text" }

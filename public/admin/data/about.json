@@ -11,7 +11,7 @@
   ],
   "Clients": [
     {
-      "image": "/assests/images/jdeol_portrait_jashan.jpg",
+      "logo": "/assests/images/jdeol_portrait_jashan.jpg",
       "name": "Client 1"
     }
   ]

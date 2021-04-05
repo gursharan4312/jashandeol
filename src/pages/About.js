@@ -4,44 +4,36 @@ import AboutMe from "../components/AboutMe";
 import Clients from "../components/Clients";
 import Layout from "../components/Layout";
 import List from "../components/List";
+import Loader from "../components/Loader";
 
 function Contact() {
+  const [about, setAbout] = useState("");
   const [awards, setAwards] = useState([]);
-  const [exebitions, setExebitions] = useState([]);
+  const [exhibitions, setExhibitions] = useState([]);
   const [clients, setClients] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setAwards(["award1", "award2"]);
-    setExebitions(["ex1", "ex2"]);
-    setClients([
-      {
-        name: "Client1",
-        logo: "/assests/images/jdeol_portrait_jashan.jpg",
-      },
-      {
-        name: "Client2",
-        logo: "/assests/images/jdeol_portrait_jashan.jpg",
-      },
-      {
-        name: "Client3",
-        logo: "/assests/images/jdeol_portrait_jashan.jpg",
-      },
-      {
-        name: "Client4",
-        logo: "/assests/images/jdeol_portrait_jashan.jpg",
-      },
-      {
-        name: "Client5",
-        logo: "/assests/images/jdeol_portrait_jashan.jpg",
-      },
-    ]);
+    async function getContent() {
+      setLoading(true);
+      let data = await fetch("admin/data/about.json");
+      data = await data.json();
+      setAbout({ text: data.aboutMe, image: data.aboutMeImage });
+      setAwards([...data.awards]);
+      setExhibitions([...data.exhibitions]);
+      setClients([...data.Clients]);
+      setLoading(false);
+    }
+    getContent();
   }, []);
+
   return (
     <Layout>
+      {loading && <Loader />}
       <Container className="aboutme-container">
-        <AboutMe />
+        <AboutMe {...about} />
         <List header="Awards" list={awards} />
-        <List header="Exebitions" list={exebitions} />
+        <List header="Exhibitions" list={exhibitions} />
         <Clients clients={clients} />
       </Container>
     </Layout>
