@@ -14,7 +14,11 @@ import { HiOutlineMail } from "react-icons/hi";
 
 function Header({ type }) {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const [isDark, setIsDark] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    setIsDark(!isDark);
+  };
 
   const [data, setData] = useState({});
 
@@ -48,9 +52,9 @@ function Header({ type }) {
     <header>
       <div className="nav-top fixed-top">
         <div
-          className={`${
-            type === "home" ? "" : "bg-dark"
-          }  px-2 pt-2 d-flex flex-wrap justify-content-between align-items-center  text-white`}
+          className={`${type === "home" ? "" : "bg-dark"} ${
+            isDark && "bg-dark"
+          } px-2 pt-2 d-flex flex-wrap justify-content-between align-items-center  text-white`}
         >
           <div>
             {data.phoneNumber && (
@@ -66,7 +70,7 @@ function Header({ type }) {
               </a>
             )}
           </div>
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-none d-md-flex justify-content-between align-items-center">
             {data.instaUsername && (
               <a href={`https://instagram.com/${data.instaUsername}`}>
                 <FaInstagram className="mx-2" />
@@ -88,7 +92,9 @@ function Header({ type }) {
           dark
           // fixed="top"
           expand="md"
-          className={type === "home" ? "" : "bg-dark"}
+          className={`${type === "home" ? "" : "bg-dark"} ${
+            isDark && "bg-dark"
+          }`}
         >
           <NavbarBrand
             href="/"
