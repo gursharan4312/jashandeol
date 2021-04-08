@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-      "name": "Project 1",
+      "name": "Nighang - Armed Sikh Warrior",
       "images": [
-        "/assests/images/hero1.jpg",
-        "/assests/images/hero2.jpg"
+        "/assests/images/portfolio-copy.jpg",
+        "/assests/images/jdeol_portrait_nihangsingh_jas1.jpg"
       ],
-      "details": "**Details about the project here**\n\n* **list 1**\n* **asdsad**"
+      "details": "**Details about the project here**\n\n* **Clothing**\n* **Protection & War Weapons**"
     }
   ]
 }
