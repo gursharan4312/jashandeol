@@ -3,8 +3,12 @@
     {
       "name": "                Nighang - Armed Sikh Warrior",
       "images": [
-        "/assests/images/portfolio-copy.jpg",
-        "/assests/images/jdeol_portrait_nihangsingh_jas1.jpg"
+        "/assests/images/jdeol_nihangportraits_01.jpg",
+        "/assests/images/jdeol_nihangportraits_02.jpg",
+        "/assests/images/jdeol_nihangportraits_03.jpg",
+        "/assests/images/jdeol_nihangportraits_04.jpg",
+        "/assests/images/jdeol_nihangportraits_05.jpg",
+        "/assests/images/jdeol_nihangportraits_06.jpg"
       ],
       "details": "**Details about the project here**\n\n* **Clothing**\n* **Protection & War Weapons**"
     }
