@@ -1,18 +1,18 @@
 {
-  "aboutMe": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.\n\nRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+  "aboutMe": "\\\nArtist Statement\n\nI choose photography to bring a unique perspective of imagination to reality. I make portraits which speak about the person itself, I work in very fine detail for understanding a person's life and also research about lighting patterns for creating the best portrait for the person. My goal is to create iconic portraits of famous personalities and to give them the portrait they can keep forever.",
   "aboutMeImage": "/assests/images/jdeol_portrait_jashan.jpg",
   "awards": [
-    "Award 1",
-    "Award2"
+    "2016 - 2nd position in National level Photography Competition in India. (Topic - Photoessay)  (from more than 150 Participants) ",
+    "2015 - 2nd position in photography competition, District Level College and University students in city Bathinda,Punjab."
   ],
   "exhibitions": [
-    "Exhibition 1",
-    "Exhibition 2"
+    "2013 - Kaliedescope Local Group Photography Exhibition in Bathinda,Punjab, India ",
+    "2021 - Upcoming - Solo exhibition on Nihang Portraits."
   ],
   "Clients": [
     {
-      "logo": "/assests/images/jdeol_portrait_jashan.jpg",
-      "name": "Client 1"
+      "logo": "/assests/images/prime-asia.png",
+      "name": "Prime Asia T.V."
     }
   ]
 }
