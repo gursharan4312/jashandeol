@@ -7,14 +7,15 @@ function Clients({ clients }) {
       <div className="clients-container mb-4">
         {clients.map((client, i) => (
           <div className="client" key={i}>
-            {client.logo ? (
+            {/* {client.logo ? (
               <>
                 <img alt={client.name} src={client.logo} />
                 <h4>{client.name}</h4>
               </>
             ) : (
               <h2>{client.name}</h2>
-            )}
+            )} */}
+            {client.logo && <img alt={client.name} src={client.logo} />}
           </div>
         ))}
       </div>
