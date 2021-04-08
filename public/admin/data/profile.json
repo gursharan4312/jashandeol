@@ -1,10 +1,11 @@
 {
-  "header": "Contact me",
   "details": "Jashan Deol",
-  "image": "/assests/images/jdeol_portrait_jashan.jpg",
-  "phoneNumber": "+16049615641",
-  "email": "jashandeol000@gmail.com",
+  "header": "Contact me",
   "instaUsername": "jashankarandeepsinghdeol",
-  "fb": "#",
-  "twitter": "#"
+  "twitter": "https://twitter.com/jashanD16714677",
+  "phoneNumber": "+16049615641",
+  "image": "/assests/images/portfolio.jpg",
+  "fb": "https://www.facebook.com/jashandeolphotography",
+  "email": "jashandeol000@gmail.com",
+  "linkedIn": "https://www.linkedin.com/in/jashandeol/"
 }
