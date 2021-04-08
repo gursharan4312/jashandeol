@@ -10,7 +10,7 @@
         "/assests/images/jdeol_nihangportraits_05.jpg",
         "/assests/images/jdeol_nihangportraits_06.jpg"
       ],
-      "details": "**Details about the project here**\n\n* **Clothing**\n* **Protection & War Weapons**"
+      "details": "**Nihangs** are a very famous and prestigious armed [Sikh](https://www.sikhiwiki.org/index.php/Sikh \"Sikh\") order. Early Sikh military history is dominated by the Akali Sikh military order that is particularly noted for the many famous military victories they won while being heavily out-numbered. The Nihangs have historically been held in great affection and respect by [Sikhs](https://www.sikhiwiki.org/index.php/Sikh \"Sikh\") due the pivotal role they have played in the Sikh history and the Sikh military history in particular. The Nihang's activities are currently mostly ceremonial, as it is peace time but in times of war for the Sikh religion, the Akalis have historically spear-headed the attack on the enemy. As per history and traditions, Nihang armymen are considered to be sons of Guru Gobind Singh and Mata Sahib Devan."
     },
     {
       "name": "Prime Asia T.V. ",
@@ -25,7 +25,18 @@
         "/assests/images/jdeol_primeasiatv_portraits_07.jpg",
         "/assests/images/jdeol_primeasiatv_portraits_08.jpg"
       ],
-      "details": "Portraits of Prime Asia T.V. show runner\n\n* Aman Khatkar - CEO\n* Romy Kendola\n* Parmvir Baath - Journalist\n* Gurpreet Sandhawalia - Journalist"
+      "details": "Portraits of Prime Asia T.V. show runner\n\n* Aman Khatkar - CEO\n* Romy Kendola\n* Parmvir Baath - Journalist\n* Gurpreet Sandhawalia - Journalist\n\n  Prime Asia TV started its humble journey in 2016 by opening 2 studios in Canada, one in Vancouver & one in Toronto and one studio in Jalandhar, India. The channel is a brainchild of Mr. Aman Khatkar, founder and CEO who started this channel after realising dearth of content which is engaging and relevant for Punjabi NRI audience settled across the globe.\n\n  The vision of the channel was ‘to bring communities together’ by contributing positivity and hope in the day to day life of our audience. Prime Asia today have successfully been able to establish itself as ‘next-door’ channel for Punjabi understanding community across the world. Prime Asia T.V. receive audience accolades and feedback in abundance on daily basis as a family member and this is of immense help to improve our content and programming style regularly."
+    },
+    {
+      "name": "Jambo Grill - Taste of four continents",
+      "details": "Jambo Grill \n\nSince 2005, Jambo Grill presents customers with the taste of four continents: Iran, India, Africa & Canada. Their dishes are made to order with only the finest ingredients and served with Halal Meats. Their authentic menu provides a unique selection of East African and Indian fusion entrées that are sure to set your taste buds on a journey through time. From wide selection of Curries, Biryanis & Thalis to our grilled Tandoori meats and famous Ribs all served with fresh home made Naan.\\\nExcite your taste buds at www.jambogrill.ca!",
+      "images": [
+        "/assests/images/jashandeol.com_jambogrill_3.jpg",
+        "/assests/images/jashandeol.com_jambogrill_1.jpg",
+        "/assests/images/jashandeol.com_jambogrill_5.jpg",
+        "/assests/images/jashandeol.com_jambogrill_2.jpg",
+        "/assests/images/jashandeol.com_jambogrill_4.jpg"
+      ]
     }
   ]
 }
