@@ -21,6 +21,18 @@
     {
       "name": "Your Canada Immigration",
       "logo": "/assests/images/yci.png"
+    },
+    {
+      "name": "Basant Motors",
+      "logo": "/assests/images/bm.png"
+    },
+    {
+      "name": "Humble Motion Pictures",
+      "logo": "/assests/images/humble-motion-pictures.png"
+    },
+    {
+      "logo": "/assests/images/akproductions.png",
+      "name": "Aman Khatkar"
     }
   ]
 }
