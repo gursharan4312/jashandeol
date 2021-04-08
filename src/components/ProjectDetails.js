@@ -5,7 +5,7 @@ function ProjectDetails({ name, images, details }) {
   return (
     <Container className="project-details-continer">
       <div className="project-details">
-        <h2>{name}</h2>
+        <h3>{name}</h3>
         {details && <Markdown>{details}</Markdown>}
       </div>
       <div className="project-images">

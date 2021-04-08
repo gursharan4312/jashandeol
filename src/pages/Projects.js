@@ -58,8 +58,8 @@ function Projects() {
                   key={i}
                   onClick={() => history.push(`/projects/${project.name}`)}
                 >
-                  <div className="project-name">
-                    <p>{project.name}</p>
+                  <div className="project-name" style={{ textAlign: "center" }}>
+                    <h4>{project.name}</h4>
                     <small>--view--</small>
                   </div>
                   <img
